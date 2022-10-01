@@ -1,15 +1,14 @@
 <template>
-  <div>hi</div>
-  <Uu />
+  <div>
+    导航栏 | <router-link to="/">Uu</router-link> |
+    <router-link to="/xxx">Uu2</router-link>
+  </div>
+  <hr />
+  <router-view />
 </template>
 
 <script>
-import Uu from "./components/Uu";
-
 export default {
-  name: {
-    name: "App",
-  },
-  components: { Uu },
+  name: "App",
 };
 </script>
