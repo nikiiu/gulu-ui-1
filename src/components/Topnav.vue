@@ -1,11 +1,12 @@
 import { default } from './Home.vue';
 <template>
   <div class="topnav">
-    <div class="logo" @click="toggleAside">LOGO</div>
+    <div class="logo">LOGO</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
+    <span class="toggleAside" @click="toggleAside"></span>
   </div>
 </template>
 <script lang="ts">
@@ -27,6 +28,8 @@ export default {
   display: flex;
   padding: 16px;
   position: relative;
+  justify-content: center;
+  align-items: center;
   z-index: 10;
   > .logo {
     max-width: 6em;
@@ -38,6 +41,16 @@ export default {
     flex-wrap: nowrap;
     > li {
       margin: 0 1em;
+    }
+  }
+  > .toggleAside {
+  }
+  @media (max-width: 500px) {
+    > .menu {
+      display: none;
+    }
+    > .logo {
+      margin: 0 auto;
     }
   }
 }
