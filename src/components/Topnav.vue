@@ -44,6 +44,14 @@ export default {
     }
   }
   > .toggleAside {
+    width: 24px;
+    height: 24px;
+    display: none;
+    background: red;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   @media (max-width: 500px) {
     > .menu {
@@ -51,6 +59,9 @@ export default {
     }
     > .logo {
       margin: 0 auto;
+    }
+    > .toggleAside {
+      display: inline-block;
     }
   }
 }
