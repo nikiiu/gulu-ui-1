@@ -63,7 +63,7 @@ $grey: grey;
   color: $color;
   border: 1px solid $border-color;
   border-radius: $radius;
-  box-shadow: 0 1px 0 fade-out(black, 0.95); //box-shadow: 0 1px 0 fade-out(black, 0.95);
+  box-shadow: 0 1px 0 fade-out(black, 0.95); /* x 偏移量 | y 偏移量 | 阴影模糊半径 | 阴影颜色 */
   transition: background 250ms;
   & + & {
     margin-left: 8px;
