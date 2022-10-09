@@ -1,7 +1,9 @@
 import { default } from './Home.vue';
 <template>
   <div class="topnav">
-    <div class="logo">LOGO</div>
+    <div class="logo">
+      <svg class="iconpark-icon"><use href="#elephant"></use></svg>
+    </div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -23,7 +25,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$color: #007974;
+.iconpark-icon {
+  width: 32px;
+  height: 32px;
+}
 .topnav {
+  color: $color;
   display: flex;
   padding: 16px;
   position: fixed;
@@ -61,6 +69,7 @@ export default {
     }
     > .logo {
       margin: 0 auto;
+      max-width: 6em;
     }
     > .toggleAside {
       display: inline-block;
