@@ -52,7 +52,7 @@ $color: #007974;
   width: 100%;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 20;
   > .logo {
     max-width: 6em;
     margin-right: auto;
