@@ -1,9 +1,8 @@
-import { default } from './Home.vue';
 <template>
   <div class="topnav">
-    <div class="logo">
+    <router-link to="/" class="logo">
       <svg class="iconpark-icon"><use href="#elephant"></use></svg>
-    </div>
+    </router-link>
     <ul class="menu">
       <li>
         <router-link to="/doc">文档</router-link>
