@@ -29,7 +29,7 @@
   </div>
 </template>
 <script lang="ts">
-import { onMounted, onUpdated, ref } from "vue";
+import { onMounted, ref, watchEffect } from "vue";
 import Tab from "./Tab.vue";
 
 export default {
@@ -42,18 +42,18 @@ export default {
     const selectedItem = ref<HTMLDivElement>();
     const indicator = ref<HTMLDivElement>();
     const container = ref<HTMLDivElement>();
-    const x = () => {
-      //只在第一次渲染执行
-      const { width } = selectedItem.value!.getBoundingClientRect();
-      indicator.value!.style.width = width + "px";
-      const { left: left1 } = container.value!.getBoundingClientRect();
-      const { left: left2 } = selectedItem.value!.getBoundingClientRect();
-      const left = left2 - left1;
-      indicator.value!.style.left = left + "px";
-    };
-    onMounted(x);
+    onMounted(() => {
+      watchEffect(() => {
+        //只在第一次渲染执行
+        const { width } = selectedItem.value!.getBoundingClientRect();
+        indicator.value!.style.width = width + "px";
+        const { left: left1 } = container.value!.getBoundingClientRect();
+        const { left: left2 } = selectedItem.value!.getBoundingClientRect();
+        const left = left2 - left1;
+        indicator.value!.style.left = left + "px";
+      });
+    });
 
-    onUpdated(x);
     const defaults = context.slots.default!();
     defaults.forEach((tag) => {
       if (tag.type !== Tab) {
