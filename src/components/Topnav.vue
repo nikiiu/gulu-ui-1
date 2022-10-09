@@ -9,12 +9,24 @@ import { default } from './Home.vue';
         <router-link to="/doc">文档</router-link>
       </li>
     </ul>
-    <span class="toggleAside" @click="toggleAside"></span>
+    <svg
+      v-if="toggleMenuButtonVisible"
+      class="toggleAside"
+      @click="toggleAside"
+    >
+      <use href="#more-app"></use>
+    </svg>
   </div>
 </template>
 <script lang="ts">
 import { inject, Ref } from "vue";
 export default {
+  props: {
+    toggleMenuButtonVisible: {
+      type: Boolean,
+      default: false,
+    },
+  },
   setup() {
     const asideVisible = inject<Ref<boolean>>("asideVisible")!;
     const toggleAside = () => {
@@ -55,14 +67,13 @@ $color: #007974;
     }
   }
   > .toggleAside {
-    width: 24px;
-    height: 24px;
-    display: none;
-    background: red;
+    width: 32px;
+    height: 32px;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
   }
   @media (max-width: 500px) {
     > .menu {
