@@ -15,7 +15,7 @@
     <div class="gulu-tabs-content">
       <component
         class="gulu-tabs-content-item"
-        :class="{ selected: c.props.title === selected }"
+        :class="{ selected: c.props?.title === selected }"
         v-for="(c, index) in defaults"
         :key="index"
         :is="c"
@@ -33,7 +33,7 @@ export default {
     },
   },
   setup(props, context) {
-    const defaults = context.slots.default();
+    const defaults = context.slots.default!();
     defaults.forEach((tag) => {
       if (tag.type !== Tab) {
         throw new Error("Tabs子标签必须是Tab");
@@ -41,7 +41,7 @@ export default {
     });
 
     const titles = defaults.map((tag) => {
-      return tag.props.title;
+      return tag.props!.title;
     });
     const select = (title: string) => {
       context.emit("update:selected", title);
