@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="markdown-body">
     <h1>介绍</h1>
     <p>咕噜UI 是一款基于 Vue 3 和 TypeScript 的 UI 组件库。</p>
     <p>这款组件库主要用于学习，尽量不采用第三方库。</p>
