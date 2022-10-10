@@ -40,7 +40,6 @@
 <script lang="ts">
 import { inject, Ref } from "vue";
 import Topnav from "../components/Topnav.vue";
-import { router } from "../router";
 export default {
   components: { Topnav },
   setup() {
@@ -50,12 +49,14 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+$aside-index: 10;
 .layout {
   display: flex;
   flex-direction: column;
   height: 100vh;
   > .nav {
     flex-shrink: 0;
+    position: absolute;
   }
   > .content {
     flex-grow: 1;
@@ -78,6 +79,7 @@ export default {
   }
 }
 aside {
+  z-index: $aside-index;
   background: lightblue;
   width: 150px;
   padding: 16px 0;
