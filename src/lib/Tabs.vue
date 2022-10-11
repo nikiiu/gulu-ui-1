@@ -7,6 +7,7 @@
         v-for="(t, index) in titles"
         :ref="
           (el) => {
+            //@ts-ignore
             if (t === selected) selectedItem = el;
           }
         "
