@@ -5,7 +5,7 @@
 然后在你的代码中写入下面的代码
 
 ```
-import {Button, Tabs, Switch, Dialog} from "gulu-ui"
+import {Button, Tab, Tabs, Switch, openDialog, Dialog} from "guuu-ui-1"
 
 ```
 
@@ -21,7 +21,7 @@ import {Button, Tabs, Switch, Dialog} from "gulu-ui"
   </div>
 </template>
 <script>
-import {Button, Tabs, Switch, Dialog} from "king-ui"
+import {Button, Tab, Tabs, Switch, openDialog, Dialog} from "guuu-ui-1"
 export default {
   components: {Button}
 }

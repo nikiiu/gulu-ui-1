@@ -5,7 +5,7 @@
   <Button theme="text" disabled>禁用文字按钮</Button>
 </template>
 <script lang="ts">
-import Button from "../lib/Button.vue";
+import { Button } from "../lib/index";
 export default {
   components: { Button },
 };

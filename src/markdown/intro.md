@@ -1,6 +1,6 @@
 # 介绍
 
-咕噜UI 是一款基于 Vue 3 和 TypeScript 的 UI 组件库。
+咕噜噜UI 是一款基于 Vue 3 和 TypeScript 的 UI 组件库。
 
 这款组件库主要用于学习，尽量不采用第三方库。
 
