@@ -3,10 +3,10 @@
     <div class="topnavAndBanner">
       <Topnav />
       <div class="banner">
-        <h1>咕噜UI</h1>
+        <h1>咕噜噜UI</h1>
         <h2>一个厉害的UI框架</h2>
         <p class="actions">
-          <a href="https://github.com">GitHub</a>
+          <a href="https://github.com/nikiiu/gulu-ui-1">GitHub</a>
           <router-link to="/doc">开始</router-link>
         </p>
       </div>
